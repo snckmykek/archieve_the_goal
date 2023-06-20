@@ -1,0 +1,40 @@
+<MainScreen>
+
+    MDBottomNavigation:
+
+        MDBottomNavigationItem:
+            name: "heatmap"
+
+            Heatmap:
+
+        MDBottomNavigationItem:
+            name: "actions"
+
+            Actions:
+
+
+<Heatmap>
+
+
+<GoalHeatmap>
+    orientation: 'vertical' if self.level % 2 == 0 else 'horizontal'
+    spacing: '10dp'
+    padding: '30dp'
+
+    canvas:
+        Color:
+            rgba: [.91,.90,.89, 1]
+        RoundedRectangle:
+            pos: self.pos
+            size: self.size
+        Color:
+            rgba: [0, 1, 0, 1]
+        RoundedRectangle:
+            pos: [self.x + dp(5), self.y + dp(5)]
+            size: [self.width - dp(10), self.height - dp(10)]
+
+
+<Actions>
+
+
+<ActionsList>
